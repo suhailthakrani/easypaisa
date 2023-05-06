@@ -1,0 +1,36 @@
+{
+    "feautres":{
+        "1":[
+            {
+                "name1": "Packages",
+                "image1": "assets/icons/easycash loan.png",
+                "name2": "Packages",
+                "image2": "assets/icons/Internet.png"
+              },
+              {
+                "name1": "Packages",
+                "image1": "assets/icons/easycash loan.png",
+                "name2": "Packages",
+                "image2": "assets/icons/Internet.png"
+              },
+              {
+                "name1": "Packages",
+                "image1": "assets/icons/easycash loan.png",
+                "name2": "Packages",
+                "image2": "assets/icons/Internet.png"
+              },
+              {
+                "name1": "Packages",
+                "image1": "assets/icons/easycash loan.png",
+                "name2": "Packages",
+                "image2": "assets/icons/Internet.png"
+              },
+              {
+                "name1": "Packages",
+                "image1": "assets/icons/easycash loan.png",
+                "name2": "Packages",
+                "image2": "assets/icons/Internet.png"
+              }
+        ]
+    }
+}
