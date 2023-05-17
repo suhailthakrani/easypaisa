@@ -6,6 +6,7 @@ import 'package:easypaisa/screens/home/components/first_view.dart';
 import 'package:easypaisa/screens/home/components/fourth_view.dart';
 import 'package:easypaisa/screens/home/components/second_view.dart';
 import 'package:easypaisa/screens/home/components/third_view.dart';
+import 'package:easypaisa/screens/my_account/view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -139,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen>
                   Expanded(
                     child: ListView.builder(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
-                      itemCount: filteredItems.length == 0
+                      itemCount: filteredItems.isEmpty
                           ? items.length
                           : filteredItems.length,
                       itemBuilder: (BuildContext context, int index) {
@@ -164,46 +165,13 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  int _currentIndex = 0;
-  List<Widget> _screens = [];
+ 
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: _getBody(),
-        bottomNavigationBar: BottomNavigationBar(
-          selectedFontSize: 11,
-          unselectedFontSize: 10,
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.green,
-          unselectedItemColor: Colors.black54,
-          currentIndex: _currentIndex,
-          onTap: (value) {
-            setState(() {
-              _currentIndex = value;
-            });
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.location_on_outlined), label: 'Cash Points'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.qr_code_scanner_outlined), label: 'Scan Code'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.headset_mic_outlined), label: 'Promotions'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline_outlined), label: 'My Account'),
-          ],
-        ),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {},
-        //   child: Icon(Icons.headset_mic_sharp),
-        // ),
-        // floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
+       
         floatingActionButton: Stack(
           alignment: Alignment.centerRight,
           children: [
@@ -234,8 +202,7 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 
   List<String> images = [

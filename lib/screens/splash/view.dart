@@ -1,4 +1,5 @@
 import 'package:easypaisa/screens/home/view.dart';
+import 'package:easypaisa/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => const MainScreen(),
         ),
       );
     });
@@ -17,7 +18,7 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
           child: Container(
-              padding: EdgeInsets.only(right: 10),
+              padding: const EdgeInsets.only(right: 10),
               child: Image.asset('assets/images/splash.jpg'))),
     );
   }
