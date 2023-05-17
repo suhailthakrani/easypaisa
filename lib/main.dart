@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // scrollBehavior: const MaterialScrollBehavior(),
       theme: ThemeData(
-        useMaterial3: true,
-        // primarySwatch: Colors.blue,
+        // useMaterial3: true,
+        primarySwatch: Colors.green,
       ),
       home: const SplashScreen(),
     );
