@@ -9,7 +9,7 @@ class CashPointsScreen extends StatefulWidget {
 }
 
 class _CashPointsScreenState extends State<CashPointsScreen> {
-  bool _isExpanded = false;
+  bool _isExpanded = true;
 
   void _toggleExpanded() {
     setState(() {
@@ -250,7 +250,7 @@ class _CashPointsScreenState extends State<CashPointsScreen> {
                                                             width: 8,
                                                             height: 16,
                                                             color: Colors
-                                                                .grey.shade400,
+                                                                .grey.shade500,
                                                           ),
                                                           Expanded(
                                                             child: Container(
@@ -274,6 +274,11 @@ class _CashPointsScreenState extends State<CashPointsScreen> {
                                                                 style:
                                                                     TextStyle(
                                                                   fontSize: 8,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  color: Colors
+                                                                      .black45,
                                                                 ),
                                                               ),
                                                             ),
@@ -283,6 +288,11 @@ class _CashPointsScreenState extends State<CashPointsScreen> {
                                                                 style:
                                                                     TextStyle(
                                                                   fontSize: 8,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  color: Colors
+                                                                      .black45,
                                                                 ),
                                                               ),
                                                             ),
@@ -292,6 +302,11 @@ class _CashPointsScreenState extends State<CashPointsScreen> {
                                                                 style:
                                                                     TextStyle(
                                                                   fontSize: 8,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  color: Colors
+                                                                      .black45,
                                                                 ),
                                                               ),
                                                             )

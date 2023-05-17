@@ -165,44 +165,40 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: _getBody(),
-       
-        floatingActionButton: Stack(
-          alignment: Alignment.centerRight,
-          children: [
-            Positioned(
-              bottom: 80,
-              right: 0,
-              child: Container(
-                alignment: Alignment.center,
-                height: 40.0,
-                width: 40.0,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(12),
-                    bottomLeft: Radius.circular(12),
-                  ),
-                  color: Colors.green,
+      body: _getBody(),
+      floatingActionButton: Stack(
+        alignment: Alignment.centerRight,
+        children: [
+          Positioned(
+            bottom: 80,
+            right: 0,
+            child: Container(
+              alignment: Alignment.center,
+              height: 40.0,
+              width: 40.0,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(12),
+                  bottomLeft: Radius.circular(12),
                 ),
+                color: Colors.green,
               ),
             ),
-            const Positioned(
-              bottom: 88,
-              right: 8,
-              child: Icon(
-                Icons.headset_mic_outlined,
-            
-                color: Colors.white,
-              ),
+          ),
+          const Positioned(
+            bottom: 88,
+            right: 8,
+            child: Icon(
+              Icons.headset_mic_outlined,
+              color: Colors.white,
             ),
-          ],
-        ),
-      );
+          ),
+        ],
+      ),
+    );
   }
 
   List<String> images = [
@@ -636,6 +632,8 @@ class _HomeScreenState extends State<HomeScreen>
                 children: [
                   Expanded(
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
                       color: Colors.white,
                       surfaceTintColor: Colors.white,
                       margin: EdgeInsets.all(8),
@@ -686,6 +684,8 @@ class _HomeScreenState extends State<HomeScreen>
                   const SizedBox(width: 5),
                   Expanded(
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
                       margin: EdgeInsets.all(8),
                       color: Colors.white,
                       surfaceTintColor: Colors.white,
@@ -746,6 +746,8 @@ class _HomeScreenState extends State<HomeScreen>
                   const SizedBox(width: 5),
                   Expanded(
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
                       margin: EdgeInsets.all(8),
                       color: Colors.white,
                       surfaceTintColor: Colors.white,
