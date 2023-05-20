@@ -1,3 +1,4 @@
+import 'package:easypaisa/screens/main_screen.dart';
 import 'package:easypaisa/screens/my_account/components/account_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -19,11 +20,20 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: const [
-                Icon(
-                  Icons.arrow_back_ios_new,
-                  size: 22,
-                  color: Colors.black54,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MainScreen(),
+                        ));
+                  },
+                  child: const Icon(
+                    Icons.arrow_back_ios_new,
+                    size: 22,
+                    color: Colors.black54,
+                  ),
                 ),
               ],
             ),

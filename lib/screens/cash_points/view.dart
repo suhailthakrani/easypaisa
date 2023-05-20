@@ -20,15 +20,19 @@ class _CashPointsScreenState extends State<CashPointsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff8ab4f8),
+      backgroundColor: const Color(0xff8ab4f8),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.green,
-        leading: const Icon(Icons.arrow_back_ios_new),
+        leading: const Icon(
+          Icons.arrow_back_ios_new,
+          size: 18,
+        ),
         title: const Padding(
-          padding: EdgeInsets.only(left: 30.0),
+          padding: EdgeInsets.only(left: 30.0, top: 8),
           child: Text(
             'Cash Deposit',
+            style: TextStyle(fontSize: 18),
           ),
         ),
       ),
@@ -372,7 +376,7 @@ class _CashPointsScreenState extends State<CashPointsScreen> {
                                         Container(
                                           height: 45,
                                           padding: const EdgeInsets.symmetric(
-                                              vertical: 5, horizontal: 12),
+                                              vertical: 5, horizontal: 20),
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *

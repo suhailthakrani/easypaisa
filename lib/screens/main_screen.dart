@@ -1,6 +1,7 @@
 import 'package:easypaisa/screens/cash_points/view.dart';
 import 'package:easypaisa/screens/home/view.dart';
 import 'package:easypaisa/screens/my_account/view.dart';
+import 'package:easypaisa/screens/promotions/view.dart';
 import 'package:easypaisa/screens/scan_code/view.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const CashPointsScreen(),
     const ScanCodeScreen(),
-    const HomeScreen(),
+    const PromotionsScreen(),
     const MyAccountScreen(),
   ];
   @override

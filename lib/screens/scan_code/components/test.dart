@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:camera/camera.dart';
 
 class QRScannerScreen extends StatefulWidget {
   const QRScannerScreen({super.key});
@@ -12,8 +13,11 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
   final GlobalKey _qrKey = GlobalKey(debugLabel: 'QR');
   QRViewController? _qrViewController;
 
- 
-  
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -144,8 +148,8 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
                       ],
                     ),
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
                       backgroundColor: Colors.transparent,
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
@@ -178,16 +182,19 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
   void _onQRViewCreated(QRViewController controller) {
     setState(() {
       _qrViewController = controller;
-      _qrViewController!.scannedDataStream.listen((scanData) {
-        // Handle the scanned QR code data
-        print('Scanned QR code: ${scanData.code}');
-      });
+      // _qrViewController!.
+      // scannedDataStream.listen((scanData) {
+      //   // Handle the scanned QR code data
+      //   print('Scanned QR code: ${scanData.code}');
+      // });
     });
   }
 
   @override
   void dispose() {
+    _qrViewController!.stopCamera();
     _qrViewController?.dispose();
+
     super.dispose();
   }
 }

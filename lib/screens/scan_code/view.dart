@@ -151,7 +151,7 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
                       ),
                     ],
                   ),
-                  const Expanded(child: QRScannerScreen()),
+                   const Expanded(child: QRScannerScreen()),
                 
                 ],
               ),
